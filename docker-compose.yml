@@ -1,0 +1,12 @@
+services:
+  escoplus-skills-extender:
+    image: ${DOCKER_REG}${DOCKER_REPO}${APP_NAME}:${DOCKER_TAG}
+    build:
+      context: .
+    container_name: escoplus-skills-extender
+    environment:
+      - TRACKER_API=https://skillab-tracker.csd.auth.gr/api
+    ports:
+      - '8004:8000'
+    labels:
+      io.portainer.accesscontrol.teams: skillab-all

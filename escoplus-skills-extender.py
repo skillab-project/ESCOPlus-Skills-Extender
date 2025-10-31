@@ -3,7 +3,8 @@ from fastapi import FastAPI, APIRouter
 from fastapi import FastAPI, Query
 
 
-app = FastAPI(title="SKILLAB ESCOPlus Skills Extender API")
+app = FastAPI(title="SKILLAB ESCOPlus Skills Extender API",
+              root_path="/escoplus-skills-extender")
 
 # Create sub-routers
 analysis_router = APIRouter(prefix="/api/analysis", tags=["Analysis"])
